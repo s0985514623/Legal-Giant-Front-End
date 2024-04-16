@@ -36,6 +36,15 @@ html {
 .hero-image {
   background-position: 100% center;
 }
+.lawyers-section .swiper-slide,
+.testimonial-section .swiper-slide {
+  height: auto;
+}
+.lawyers-section .swiper-slide > div,
+.testimonial-section .swiper-slide > div {
+  height: 100%;
+}
+
 .lawyers-section .swiper-button-prev:after,
 .testimonial-section .swiper-button-prev:after {
   content: "";
