@@ -1,8 +1,8 @@
 {
-  "name": "Legal-Giant-Front-End",
-  "description": "Legal-Giant-Front-End",
+  "name": "Tailwind Template",
+  "description": "tailwind template starter",
   "version": "1.0.0",
-  "author": "ren",
+  "author": "risuvodev",
   "scripts": {
     "dev": "npx tailwindcss -i ./input.css -o ./assets/css/output.css --watch",
     "build": "npx tailwindcss -i ./input.css -o ./assets/css/output.css"

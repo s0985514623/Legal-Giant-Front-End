@@ -1,0 +1,52 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+/* google fonts  end */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'DM Sans', sans-serif !important;
+    overflow-x:hidden;
+}
+h1,h2,h3,h4,h5,h6,.spline-sans{
+    font-family: 'Spline Sans', sans-serif !important;
+}
+.common-trans{
+    @apply transition-all duration-300 ease-linear
+}
+.nav-wrapper ul li a{
+    @apply spline-sans text-base text-gray-900 flex space-x-1.5 items-center font-semibold;
+}
+.nav-wrapper.nav-wrapper-2 ul li a{
+    @apply text-white;
+}
+.safety-section .filter-btn.active{
+    @apply bg-primary-500 text-white
+}
+.safety-section .filter-btn{
+    @apply bg-secondary text-primary-900
+}
+.testimonial-section-two .testimonial-item{
+    @apply transition-all duration-300 ease-linear
+}
+
+.testimonial-section-two .testimonial-item .quote{
+    @apply text-primary-100;
+}
+.testimonial-section-two .testimonial-item .quote-user,.testimonial-section-two .testimonial-item .quote-user-desig{
+    @apply text-primary-900;
+}
+.testimonial-section-two .testimonial-item:hover{
+    @apply bg-primary-500;
+}
+.testimonial-section-two .testimonial-item:hover .quote{
+    @apply text-white;
+}
+.testimonial-section-two .testimonial-item:hover .quote-user,.testimonial-section-two .testimonial-item:hover .quote-user-desig{
+    @apply text-white;
+}
+.headline-default{
+    @apply sm:text-[40px] font-bold spline-sans sm:leading-[55px] text-3xl;
+}
