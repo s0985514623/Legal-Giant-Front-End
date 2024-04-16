@@ -799,10 +799,6 @@ video {
   top: 100%;
 }
 
-.top-\[150px\]{
-  top: 150px;
-}
-
 .z-10{
   z-index: 10;
 }
@@ -839,11 +835,6 @@ video {
 .my-\[60px\]{
   margin-top: 60px;
   margin-bottom: 60px;
-}
-
-.my-0{
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 .-mt-\[30px\]{
@@ -950,6 +941,10 @@ video {
   margin-top: 0.625rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
 .mt-5{
   margin-top: 1.25rem;
 }
@@ -964,14 +959,6 @@ video {
 
 .mt-\[60px\]{
   margin-top: 60px;
-}
-
-.mt-0{
-  margin-top: 0px;
-}
-
-.mt-4{
-  margin-top: 1rem;
 }
 
 .line-clamp-6{
@@ -1874,11 +1861,6 @@ video {
      object-position: left;
 }
 
-.object-center{
-  -o-object-position: center;
-     object-position: center;
-}
-
 .p-0{
   padding: 0px;
 }
@@ -2583,24 +2565,16 @@ h1,h2,h3,h4,h5,h6,.spline-sans{
     top: -0.875rem;
   }
 
+  .sm\:right-\[10\%\]{
+    right: 10%;
+  }
+
   .sm\:right-\[156px\]{
     right: 156px;
   }
 
   .sm\:top-\[432px\]{
     top: 432px;
-  }
-
-  .sm\:right-\[10\%\]{
-    right: 10%;
-  }
-
-  .sm\:top-\[80\%\]{
-    top: 80%;
-  }
-
-  .sm\:top-\[85\%\]{
-    top: 85%;
   }
 
   .sm\:top-\[90\%\]{
@@ -2625,10 +2599,6 @@ h1,h2,h3,h4,h5,h6,.spline-sans{
 
   .sm\:ml-5{
     margin-left: 1.25rem;
-  }
-
-  .sm\:mt-4{
-    margin-top: 1rem;
   }
 
   .sm\:mt-0{
