@@ -94,21 +94,21 @@ html {
 }
 /* 整理到這 */
 
-.about-us-page-wrapper .process-section-two .item .circle-shape {
+.about-us-page-wrapper .process-section .item .circle-shape {
   background: #fbf7ed;
   transition: all 0.5s ease-in-out;
 }
-.process-section-two .item .circle-shape {
+.process-section .item .circle-shape {
   background: #e6edec;
   transition: all 0.5s ease-in-out;
 }
-.footer-wrapper-two .discover-area {
+/* .process-section .discover-area {
   background-image: url(./../img/discover-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 .page-title-wrapper {
-  background-image: url(./../img/inner-page-banner.png);
+  background-image: url(./../img/public/header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
