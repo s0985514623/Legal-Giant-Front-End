@@ -88,6 +88,12 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.mini-contact {
+  background-color: #2e318e;
+  /* background-image: url(./../img/min-contact-bg.png); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .breadcrumb-wrapper .breadcrumb-item:last-child .ico {
   display: none;
 }
