@@ -186,7 +186,119 @@ html {
 .nav-wrapper ul li ul li:hover:before {
   width: 20px;
 }
+/* line button */
+.button-outer-circle,
+.button-outer-circle {
+  background: hsl(133.4deg 73.02% 15.02% / 20%);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.has-scale-animation,
+.has-delay-short {
+  -webkit-animation: smallScale 3s infinite;
+  animation: smallScale 3s infinite;
+}
+.has-delay-short {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
 
+@keyframes smallScale {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+/* line pop */
+.popv-main-wrapper {
+  display: none;
+}
+.popv-main-wrapper.active {
+  display: block;
+}
+.popv-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 0.8;
+  z-index: 998;
+}
+
+.popv-content {
+  z-index: 999;
+}
+.popv-close {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.popv-hide {
+  display: none !important;
+}
+button.popv-close {
+  overflow: visible;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  display: block;
+  outline: none;
+  padding: 0;
+  z-index: 1046;
+  box-shadow: none;
+  touch-action: manipulation;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.popv-close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.65;
+  padding: 0 0 18px 10px;
+  color: #3f3f3f;
+  font-style: normal;
+  font-size: 28px;
+  font-family: Arial, Baskerville, monospace;
+}
+
+.popv-close:hover,
+.popv-close:focus {
+  opacity: 1;
+}
+
+.popv-close:active {
+  top: 1px;
+}
+
+.popv-close-btn-in .popv-close {
+  color: #333;
+}
 /*=====mobile=====*/
 .nav-wrapper .mobile-drawer .mobile-wid {
   left: -350px;

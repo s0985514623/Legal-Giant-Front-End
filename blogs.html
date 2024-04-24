@@ -80,10 +80,10 @@
                 </span>
               </div>
             </a>
-            <a href="team.html">
+            <a href="javascript:void(0)" onclick="linePopup()">
               <div class="w-[155px] h-full flex justify-center items-center bg-primary-500 hover:bg-primary-900 common-trans">
                 <div class="flex space-x-2 items-center text-white">
-                  <span class="text-sm">Get a quote</span>
+                  <span class="text-sm">加Line諮問</span>
                   <span>
                     <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                       <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -169,7 +169,7 @@
                       </a>
                     </li>
                   </ul>
-                  <div class="flex items-center justify-center">
+                  <div class="flex items-center justify-start">
                     <span>
                       <svg width="66" height="68" viewBox="0 0 66 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M47.8159 16.8074C53.1826 25.1215 47.9291 49.5303 46.7752 54.5301C46.6562 55.0456 46.172 55.3582 45.6532 55.2543C40.6218 54.2471 16.2152 48.9838 10.8484 40.6697C4.85702 31.3878 8.27544 18.5215 18.4837 11.9321C28.692 5.34276 41.8245 7.5255 47.8159 16.8074Z" fill="#FBF7ED" />
@@ -180,7 +180,7 @@
                       </svg>
                     </span>
                     <div class="flex flex-col">
-                      <span class="text-sm text-gray-900 font-medium">連絡電話:</span>
+                      <span class="text-sm text-gray-900 font-medium">免費法律諮詢:</span>
                       <span class="text-base font-bold text-gray-900">(02)-8228-2380</span>
                     </div>
                   </div>
@@ -201,7 +201,7 @@
                 </svg>
               </span>
               <div class="flex flex-col">
-                <span class="text-sm text-gray-900 font-medium">連絡電話</span>
+                <span class="text-sm text-gray-900 font-medium">免費法律諮詢:</span>
                 <span class="text-base font-bold text-gray-900">(02)-8228-2380</span>
               </div>
             </div>
@@ -240,6 +240,18 @@
             </button>
           </div>
         </div>
+      </div>
+      <!-- Line Button -->
+      <div class="line-wrapper fixed right-10 bottom-10 z-50">
+        <button onclick="linePopup()" type="button" class="flex items-center">
+          <div class="w-[55px] h-[55px] relative">
+            <div class="w-full h-full rounded-full flex justify-center items-center bg-primary-500 relative z-10">
+              <img src="./assets/img/public/LINE_ICON.png" alt="" class="w-full h-full" />
+            </div>
+            <div class="button-outer-circle has-scale-animation"></div>
+            <div class="button-outer-circle has-scale-animation has-delay-short"></div>
+          </div>
+        </button>
       </div>
     </header>
     <main class="w-full min-h-screen">
@@ -1020,6 +1032,22 @@
         </div>
       </div>
     </footer>
+    <!-- line popup   -->
+    <div class="popv-main-wrapper">
+      <div class="popv-bg" onclick="linePopup()"></div>
+      <div class="popv-content bg-white min-w-60 min-h-60 p-5 fixed top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%]">
+        <button onclick="linePopup()" title="Close (Esc)" type="button" class="popv-close">×</button>
+        <div class="">
+          <h4 class="font-bold text-primary-500 text-2xl">LINE 免費諮詢</h4>
+          <div class="text-center flex flex-col gap-2 items-center justify-center py-2 my-2 border-0 border-y border-solid border-primaryBorder">
+            <p class="font-medium text-slate-600 text-sm">有任何法律問題，歡迎加入綠巨人的LINE帳號，立即免費諮詢！</p>
+            <img src="assets/img/public/LINE_ICON.png" alt="" class="aspect-square max-h-40 object-contain object-center" />
+            <span class="font-medium text-slate-600 text-sm">LINE ID：@abc123</span>
+          </div>
+        </div>
+        <button onclick="linePopup()" title="Close (Esc)" type="button" class="w-full text-right font-bold text-slate-600 text-sm">關閉</button>
+      </div>
+    </div>
     <!-- script -->
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/main.js"></script>

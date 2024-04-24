@@ -80,7 +80,7 @@
                 </span>
               </div>
             </a>
-            <a href="javascript:void(0)">
+            <a href="javascript:void(0)" onclick="linePopup()">
               <div class="w-[155px] h-full flex justify-center items-center bg-primary-500 hover:bg-primary-900 common-trans">
                 <div class="flex space-x-2 items-center text-white">
                   <span class="text-sm">加Line諮問</span>
@@ -241,6 +241,18 @@
           </div>
         </div>
       </div>
+      <!-- Line Button -->
+      <div class="line-wrapper fixed right-10 bottom-10 z-50">
+        <button onclick="linePopup()" type="button" class="flex items-center">
+          <div class="w-[55px] h-[55px] relative">
+            <div class="w-full h-full rounded-full flex justify-center items-center bg-primary-500 relative z-10">
+              <img src="./assets/img/public/LINE_ICON.png" alt="" class="w-full h-full" />
+            </div>
+            <div class="button-outer-circle has-scale-animation"></div>
+            <div class="button-outer-circle has-scale-animation has-delay-short"></div>
+          </div>
+        </button>
+      </div>
     </header>
     <main>
       <!--      hero-->
@@ -250,7 +262,7 @@
             <h1 class="text-primary-900 xl:text-[96px] sm:text-6xl text-5xl font-bold xl:leading-[95px] mb-5">誠信與專業</h1>
             <p class="text-primary-900 text-base leading-7 mb-9 font-semibold">給予客戶正確的法律建議，<br class="block lg:hidden" />提供完善而高品質的服務</p>
             <div class="flex flex-col sm:flex-row sm:space-x-10 space-y-10 sm:space-y-0 sm:items-center">
-              <a href="javascript:void(0)">
+              <a href="javascript:void(0)" onclick="linePopup()">
                 <div class="px-[46px] py-[20px] bg-primary-500 rounded-lg text-white text-lg leading-none hover:bg-primary-900 common-trans inline">
                   <span>立刻預約諮詢</span>
                 </div>
@@ -1231,6 +1243,22 @@
         </div>
       </div>
     </footer>
+    <!-- line popup   -->
+    <div class="popv-main-wrapper">
+      <div class="popv-bg" onclick="linePopup()"></div>
+      <div class="popv-content bg-white min-w-60 min-h-60 p-5 fixed top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%]">
+        <button onclick="linePopup()" title="Close (Esc)" type="button" class="popv-close">×</button>
+        <div class="">
+          <h4 class="font-bold text-primary-500 text-2xl">LINE 免費諮詢</h4>
+          <div class="text-center flex flex-col gap-2 items-center justify-center py-2 my-2 border-0 border-y border-solid border-primaryBorder">
+            <p class="font-medium text-slate-600 text-sm">有任何法律問題，歡迎加入綠巨人的LINE帳號，立即免費諮詢！</p>
+            <img src="assets/img/public/LINE_ICON.png" alt="" class="aspect-square max-h-40 object-contain object-center" />
+            <span class="font-medium text-slate-600 text-sm">LINE ID：@abc123</span>
+          </div>
+        </div>
+        <button onclick="linePopup()" title="Close (Esc)" type="button" class="w-full text-right font-bold text-slate-600 text-sm">關閉</button>
+      </div>
+    </div>
     <!-- script -->
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/purecounter.js"></script>

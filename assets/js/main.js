@@ -16,3 +16,11 @@ document.addEventListener("scroll", () => {
     }
   }
 });
+function linePopup() {
+  const videoContainer = $(".popv-main-wrapper");
+  if (videoContainer.hasClass("active")) {
+    videoContainer.removeClass("active");
+  } else {
+    videoContainer.addClass("active");
+  }
+}
