@@ -1,4 +1,7 @@
 body {
+  background: #f8fafc;
+}
+header {
   background: white;
 }
 html {
@@ -323,6 +326,14 @@ button::-moz-focus-inner {
 .search-bar-wrapper:focus-within .search-form {
   display: block;
 }
+@keyframes tabFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /*responsive*/
 
@@ -358,3 +369,18 @@ button::-moz-focus-inner {
 }
 
 /*responsive end*/
+/* admin */
+.notify-wrap .notify-content {
+  display: none;
+  animation: tabFade 0.5s;
+}
+.notify-wrap:focus-within .notify-content {
+  display: block;
+}
+.user-wrap .user-content {
+  display: none;
+  animation: tabFade 0.5s;
+}
+.user-wrap:focus-within .user-content {
+  display: block;
+}
