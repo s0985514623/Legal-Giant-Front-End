@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal-Giant-Front Admin</title>
+    <!--    favicon-->
+    <link rel="icon" type="image/png" href="./assets/img/home/logo.jpg" />
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css" />
+    <!-- font awesome css-->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <!-- compiled from input.css -->
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <!-- overwrite custom css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!--        top bar-->
+      <div class="top-bar block px-10 w-full h-[60px] border-b border-primaryBorder shadow-[0_0_30px_rgba(14,41,50,.08)]">
+        <div class="flex justify-end items-center h-full gap-5">
+          <div class="notify-wrap relative">
+            <button class="notify-button flex justify-center items-center relative size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-slate-500 dark:text-navy-100" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M15.375 17.556h-6.75m6.75 0H21l-1.58-1.562a2.254 2.254 0 01-.67-1.596v-3.51a6.612 6.612 0 00-1.238-3.85 6.744 6.744 0 00-3.262-2.437v-.379c0-.59-.237-1.154-.659-1.571A2.265 2.265 0 0012 2c-.597 0-1.169.234-1.591.65a2.208 2.208 0 00-.659 1.572v.38c-2.621.915-4.5 3.385-4.5 6.287v3.51c0 .598-.24 1.172-.67 1.595L3 17.556h12.375zm0 0v1.11c0 .885-.356 1.733-.989 2.358A3.397 3.397 0 0112 22a3.397 3.397 0 01-2.386-.976 3.313 3.313 0 01-.989-2.357v-1.111h6.75z"
+                ></path>
+              </svg>
+              <span class="absolute -top-px -right-px flex size-3 items-center justify-center">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#f000b9] opacity-80"></span>
+                <span class="inline-flex size-2 rounded-full bg-[#f000b9]"></span>
+              </span>
+            </button>
+            <div class="notify-content absolute right-0 top-10 z-10">
+              <div class="min-w-80 flex flex-col rounded-lg border border-slate-150 bg-white">
+                <div class="rounded-t-lg bg-slate-100 text-slate-600">
+                  <div class="flex items-center justify-between px-4 py-2">
+                    <div class="flex items-center space-x-2">
+                      <h3 class="font-medium text-slate-700">通知</h3>
+                      <div class="h-5 leading-5 rounded-full bg-primary-100 px-1.5 text-white">26</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content flex flex-col overflow-hidden">
+                  <div class="flex flex-col gap-4 overflow-y-auto px-4 py-4">
+                    <a class="items-link" href="#">
+                      <div class="flex items-center space-x-3">
+                        <div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-500/10">
+                          <i class="fa fa-user-edit text-primary-500"></i>
+                        </div>
+                        <div>
+                          <p class="font-medium text-slate-600 dark:text-navy-100">User Photo Changed</p>
+                          <div class="mt-1 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">John Doe changed his avatar photo</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="items-link" href="#">
+                      <div class="flex items-center space-x-3">
+                        <div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-500/10">
+                          <i class="fa fa-user-edit text-primary-500"></i>
+                        </div>
+                        <div>
+                          <p class="font-medium text-slate-600 dark:text-navy-100">User Photo Changed</p>
+                          <div class="mt-1 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">John Doe changed his avatar photo</div>
+                        </div>
+                      </div> </a
+                    ><a class="items-link" href="#">
+                      <div class="flex items-center space-x-3">
+                        <div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-500/10">
+                          <i class="fa fa-user-edit text-primary-500"></i>
+                        </div>
+                        <div>
+                          <p class="font-medium text-slate-600 dark:text-navy-100">User Photo Changed</p>
+                          <div class="mt-1 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">John Doe changed his avatar photo</div>
+                        </div>
+                      </div> </a
+                    ><a class="items-link" href="#">
+                      <div class="flex items-center space-x-3">
+                        <div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-500/10">
+                          <i class="fa fa-user-edit text-primary-500"></i>
+                        </div>
+                        <div>
+                          <p class="font-medium text-slate-600 dark:text-navy-100">User Photo Changed</p>
+                          <div class="mt-1 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">John Doe changed his avatar photo</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="user-wrap cursor-pointer relative">
+            <button class="user-img overflow-hidden flex justify-center items-center relative size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25">
+              <img src="assets\img\home\author1.jpeg" alt="" />
+            </button>
+            <div class="user-content absolute right-0 top-10 z-20">
+              <div class="min-w-40 flex flex-col rounded-lg border border-slate-150 bg-white">
+                <div class="tab-content flex flex-col overflow-hidden">
+                  <div class="flex flex-col gap-4 overflow-y-auto px-4 py-4">
+                    <a class="items-link" href="#">
+                      <div class="flex items-center space-x-3">
+                        <p class="font-medium text-slate-600 hover:font-bold">回前台</p>
+                      </div>
+                    </a>
+                    <a class="items-link" href="#">
+                      <div class="flex items-center space-x-3">
+                        <p class="font-medium text-slate-600 hover:font-bold">登出</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!--  Dashboard area -->
+      <section class="dashboard-area py-8 mx-auto grid grid-cols-1 px-5 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[930px] xl:max-w-[1434px]">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card relative min-h-40 flex flex-row justify-between p-4 bg-white rounded-lg border-primaryBorder shadow-[0_3px_10px_rgba(14,41,50,.08)]">
+            <div class="text-area">
+              <p class="text-xs uppercase">New Followers</p>
+              <div class="mt-8 flex items-baseline space-x-1">
+                <p class="text-2xl font-semibold text-slate-700">1.3k</p>
+              </div>
+            </div>
+            <div class="icon flex rounded-xl size-10 items-center justify-center bg-primary-100">
+              <i class="fa-solid fa-user text-xl text-white"></i>
+            </div>
+            <div class="absolute bottom-0 right-0 overflow-hidden rounded-lg">
+              <i class="fa-solid fa-user translate-x-1/4 translate-y-1/4 text-5xl opacity-15"></i>
+            </div>
+          </div>
+          <div class="card relative min-h-40 flex flex-row justify-between p-4 bg-white rounded-lg border-primaryBorder shadow-[0_3px_10px_rgba(14,41,50,.08)]">
+            <div class="text-area">
+              <p class="text-xs uppercase">VIEWS</p>
+              <div class="mt-8 flex items-baseline space-x-1">
+                <p class="text-2xl font-semibold text-slate-700">30.6m</p>
+              </div>
+            </div>
+            <div class="icon flex rounded-xl size-10 items-center justify-center bg-primary-100">
+              <i class="fa-solid fa-eye text-xl text-white"></i>
+            </div>
+            <div class="absolute bottom-0 right-0 overflow-hidden rounded-lg">
+              <i class="fa-solid fa-eye translate-x-1/4 translate-y-1/4 text-5xl opacity-15"></i>
+            </div>
+          </div>
+          <div class="card relative min-h-40 flex flex-row justify-between p-4 bg-white rounded-lg border-primaryBorder shadow-[0_3px_10px_rgba(14,41,50,.08)]">
+            <div class="text-area">
+              <p class="text-xs uppercase">LIKES</p>
+              <div class="mt-8 flex items-baseline space-x-1">
+                <p class="text-2xl font-semibold text-slate-700">4.3m</p>
+              </div>
+            </div>
+            <div class="icon flex rounded-xl size-10 items-center justify-center bg-primary-100">
+              <i class="fa-solid fa-thumbs-up text-xl text-white"></i>
+            </div>
+            <div class="absolute bottom-0 right-0 overflow-hidden rounded-lg">
+              <i class="fa-solid fa-thumbs-up translate-x-1/4 translate-y-1/4 text-5xl opacity-15"></i>
+            </div>
+          </div>
+          <div class="card relative min-h-40 flex flex-row justify-between p-4 bg-white rounded-lg border-primaryBorder shadow-[0_3px_10px_rgba(14,41,50,.08)]">
+            <div class="text-area">
+              <p class="text-xs uppercase">REPORTS</p>
+              <div class="mt-8 flex items-baseline space-x-1">
+                <p class="text-2xl font-semibold text-slate-700">11.6k</p>
+              </div>
+            </div>
+            <div class="icon flex rounded-xl size-10 items-center justify-center bg-primary-100">
+              <i class="fa-solid fa-bug text-xl text-white"></i>
+            </div>
+            <div class="absolute bottom-0 right-0 overflow-hidden rounded-lg">
+              <i class="fa-solid fa-bug translate-x-1/4 translate-y-1/4 text-5xl opacity-15"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- New post & user area -->
+      <section class="new-area py-8 mx-auto grid grid-cols-1 px-5 gap-6 lg:grid-cols-2 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[930px] xl:max-w-[1434px]">
+        <div class="new-posts">
+          <div class="flex h-8 items-center justify-between">
+            <h2 class="font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">New Posts</h2>
+          </div>
+          <table class="w-full block sm:table overflow-x-auto whitespace-nowrap">
+            <tbody>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="post-category font-medium tracking-wide text-slate-400">民事訴訟</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="post-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="post-category font-medium tracking-wide text-slate-400">民事訴訟</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="post-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="post-category font-medium tracking-wide text-slate-400">民事訴訟</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="post-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="post-category font-medium tracking-wide text-slate-400">民事訴訟</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="post-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="post-category font-medium tracking-wide text-slate-400">民事訴訟</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="post-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="new-users">
+          <div class="flex h-8 items-center justify-between">
+            <h2 class="font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">New Users</h2>
+          </div>
+          <table class="w-full block sm:table overflow-x-auto whitespace-nowrap">
+            <tbody>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="user-category font-medium tracking-wide text-slate-400">律師</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="register-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="user-category font-medium tracking-wide text-slate-400">讀者</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="register-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="user-category font-medium tracking-wide text-slate-400">律師</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="register-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="user-category font-medium tracking-wide text-slate-400">讀者</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="register-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap pt-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar size-9 rounded-full overflow-hidden">
+                      <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
+                    </div>
+                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-2 pt-4">
+                  <h4 class="user-category font-medium tracking-wide text-slate-400">讀者</h4>
+                </td>
+                <td class="whitespace-nowrap pt-4">
+                  <p class="register-time text-right font-medium text-slate-700">29 May 2022</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <!-- script -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <script src="./assets/js/purecounter.js"></script>
+    <script>
+      new PureCounter();
+    </script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
