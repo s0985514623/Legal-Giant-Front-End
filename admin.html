@@ -122,7 +122,30 @@
     </header>
     <main>
       <!--  Dashboard area -->
-      <section class="dashboard-area py-8 mx-auto grid grid-cols-1 px-5 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[930px] xl:max-w-[1434px]">
+      <section class="dashboard-area py-8 mx-auto gap-6 grid grid-cols-1 px-5 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[930px] xl:max-w-[1434px]">
+        <div class="date-area">
+          <div class="flex flex-col gap-4 items-start justify-start">
+            <h2 class="text-4xl font-bold text-slate-700 line-clamp-1">Dashboard</h2>
+            <div class="flex">
+              <form action="" class="flex gap-4 flex-wrap">
+                <div class="search-input">
+                  <label for="min-date" class="font-medium text-slate-700">關鍵字:</label>
+                  <input placeholder="Search here..." class="h-full rounded-full px-4 pl-9 text-slate-800 hover:bg-slate-200 w-80" />
+                </div>
+                <div class="data-area flex gap-2">
+                  <div>
+                    <label for="min-date" class="font-medium text-slate-700">從:</label>
+                    <input type="text" id="min-date" class="rounded-full" />
+                  </div>
+                  <div>
+                    <label for="max-date" class="font-medium text-slate-700">到:</label>
+                    <input type="text" id="max-date" class="rounded-full" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <div class="card relative min-h-40 flex flex-row justify-between p-4 bg-white rounded-lg border-primaryBorder shadow-[0_3px_10px_rgba(14,41,50,.08)]">
             <div class="text-area">
@@ -372,6 +395,24 @@
     <script src="./assets/js/purecounter.js"></script>
     <script>
       new PureCounter();
+      $(function () {
+        $("#min-date").datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          dateFormat: "yy-mm-dd", //修改顯示順序
+          onClose: function (selectedDate) {
+            $("#max-date").datepicker("option", "minDate", selectedDate);
+          },
+        });
+        $("#max-date").datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          dateFormat: "yy-mm-dd", //修改顯示順序
+          onClose: function (selectedDate) {
+            $("#min-date").datepicker("option", "maxDate", selectedDate);
+          },
+        });
+      });
     </script>
     <script src="./assets/js/main.js"></script>
   </body>
