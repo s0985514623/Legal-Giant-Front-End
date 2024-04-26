@@ -127,21 +127,22 @@
           <div class="flex flex-col gap-4 items-start justify-start">
             <h2 class="text-4xl font-bold text-slate-700 line-clamp-1">Dashboard</h2>
             <div class="flex">
-              <form action="" class="flex gap-4 flex-wrap">
+              <form id="searchForm" class="flex gap-4 flex-wrap">
                 <div class="search-input">
-                  <label for="min-date" class="font-medium text-slate-700">關鍵字:</label>
-                  <input placeholder="Search here..." class="h-full rounded-full px-4 pl-9 text-slate-800 hover:bg-slate-200 w-80" />
+                  <label for="keyword" class="font-medium text-slate-700">關鍵字:</label>
+                  <input id="keyword" name="keyword" placeholder="Search here..." class="h-full rounded-full px-4 pl-9 text-slate-800 hover:bg-slate-200 w-80" />
                 </div>
-                <div class="data-area flex gap-2">
+                <div class="data-area flex gap-2 items-center">
                   <div>
                     <label for="min-date" class="font-medium text-slate-700">從:</label>
-                    <input type="text" id="min-date" class="rounded-full" />
+                    <input name="min-date" type="text" id="min-date" class="rounded-full" />
                   </div>
                   <div>
                     <label for="max-date" class="font-medium text-slate-700">到:</label>
-                    <input type="text" id="max-date" class="rounded-full" />
+                    <input name="max-date" type="text" id="max-date" class="rounded-full" />
                   </div>
                 </div>
+                <button type="submit" id="submitBtn" class="bg-primary-100 py-1 px-2.5 text-white font-semibold w-fit">送出</button>
               </form>
             </div>
           </div>
@@ -210,6 +211,7 @@
         <div class="new-posts">
           <div class="flex h-8 items-center justify-between">
             <h2 class="font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">New Posts</h2>
+            <a href="post-edit.html" class="bg-primary-100 py-1 px-2.5 text-white font-semibold w-fit">新增文章</a>
           </div>
           <table class="w-full block sm:table overflow-x-auto whitespace-nowrap">
             <tbody>
@@ -219,7 +221,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                    <a href="post-edit.html" class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
@@ -235,7 +237,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                    <a href="post-edit.html" class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
@@ -251,7 +253,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                    <a href="post-edit.html" class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
@@ -267,7 +269,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                    <a href="post-edit.html" class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
@@ -283,7 +285,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</h3>
+                    <a href="post-edit.html" class="post-title font-medium text-slate-700 line-clamp-1">監督公司的制度-監察權</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
@@ -299,6 +301,7 @@
         <div class="new-users">
           <div class="flex h-8 items-center justify-between">
             <h2 class="font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">New Users</h2>
+            <a href="user-edit.html" class="bg-primary-100 py-1 px-2.5 text-white font-semibold w-fit">新增用戶</a>
           </div>
           <table class="w-full block sm:table overflow-x-auto whitespace-nowrap">
             <tbody>
@@ -308,7 +311,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                    <a href="user-edit.html" class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
@@ -324,7 +327,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                    <a href="user-edit.html" class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
@@ -340,7 +343,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                    <a href="user-edit.html" class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
@@ -356,7 +359,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                    <a href="user-edit.html" class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
@@ -372,7 +375,7 @@
                     <div class="avatar size-9 rounded-full overflow-hidden">
                       <img class="w-full h-full object-cover object-top" src="assets/img/home/author1-1.jpg" alt="avatar" />
                     </div>
-                    <h3 class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</h3>
+                    <a href="user-edit.html" class="user-name font-medium text-slate-700 line-clamp-1">Guy Hawkins</a>
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-2 pt-4">
