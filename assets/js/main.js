@@ -24,3 +24,20 @@ function linePopup() {
     videoContainer.addClass("active");
   }
 }
+
+// 送出文章表單
+function sendPost(element) {
+  const form = element.closest("form");
+  const formData = new FormData(form);
+  const dataObj = {};
+
+  // 使用迭代器列印出所有表單數據
+  for (let [key, value] of formData.entries()) {
+    if ("content" === key) {
+      value = tinymce.get("content").getContent();
+    }
+    dataObj[key] = value;
+    console.log(`${key}: ${value}`);
+  }
+  console.log("🚀 ~ dataObj:", dataObj);
+}
