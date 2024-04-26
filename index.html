@@ -80,10 +80,13 @@
                 </span>
               </div>
             </a>
-            <a href="javascript:void(0)" onclick="linePopup()">
-              <div class="w-[155px] h-full flex justify-center items-center bg-primary-500 hover:bg-primary-900 common-trans">
+            <a href="tel:02-8228-2380">
+              <div class="w-[180px] h-full flex justify-center items-center bg-primary-500 hover:bg-primary-900 common-trans">
                 <div class="flex space-x-2 items-center text-white">
-                  <span class="text-sm">加Line諮問</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs text-white font-medium">免費法律諮詢:</span>
+                    <span class="text-sm font-bold text-white">(02)-8228-2380</span>
+                  </div>
                   <span>
                     <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                       <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -201,8 +204,9 @@
                 </svg>
               </span>
               <div class="flex flex-col">
-                <span class="text-sm text-gray-900 font-medium">免費法律諮詢:</span>
-                <span class="text-base font-bold text-gray-900">(02)-8228-2380</span>
+                <a href="javascript:void(0)" onclick="linePopup()">
+                  <span class="text-base font-bold text-gray-900">加Line諮問</span>
+                </a>
               </div>
             </div>
             <div class="search-bar-wrapper xl:block hidden w-[77px] h-full relative ml-7">
@@ -257,20 +261,26 @@
     <main>
       <!--      hero-->
       <section class="hero-area w-full relative">
-        <div class="h-full flex xl:justify-center justify-start items-center relative z-20 bg-gradient-to-r from-white">
-          <div class="theme-container xl:mx-auto">
-            <h1 class="text-primary-900 xl:text-[96px] sm:text-6xl text-5xl font-bold xl:leading-[95px] mb-5">誠信與專業</h1>
-            <p class="text-primary-900 text-base leading-7 mb-9 font-semibold">給予客戶正確的法律建議，<br class="block lg:hidden" />提供完善而高品質的服務</p>
-            <div class="flex flex-col sm:flex-row sm:space-x-10 space-y-10 sm:space-y-0 sm:items-center">
-              <a href="javascript:void(0)" onclick="linePopup()">
-                <div class="px-[46px] py-[20px] bg-primary-500 rounded-lg text-white text-lg leading-none hover:bg-primary-900 common-trans inline">
-                  <span>立刻預約諮詢</span>
-                </div>
-              </a>
+        <div class="h-full flex xl:justify-center justify-start items-end relative z-20">
+          <div class="theme-bg w-full bg-black/60 flex justify-center py-5">
+            <div class="theme-container w-full flex justify-between">
+              <div class="title">
+                <h1 class="swei-font text-amber-300 xl:text-2xl sm:text-xl text-lg mb-5">遇人不淑，經濟支柱在他......小孩還小，離？不離？</h1>
+                <p class="taiwanPearl text-white text-3xl">站在巨人的肩膀上，<br class="lg:block hidden" />家事離婚律師祝您逃脫情網，迎向嶄新人生。</p>
+              </div>
+              <div class="button flex flex-col sm:flex-row sm:space-x-10 space-y-10 sm:space-y-0 sm:items-center">
+                <a href="javascript:void(0)" onclick="linePopup()">
+                  <div class="px-2.5 py-1 bg-[#4cc764] rounded-lg text-white flex items-center">
+                    <img src="assets/img/public/LINE_ICON.png" alt="" class="w-10 object-contain" />
+                    <span class="text-xl font-semibold">免費諮詢</span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="hero-image w-full h-full absolute left-0 top-0 z-10 bg-no-repeat bg-cover" style="background-image: url('./assets/img/home/slider-bg.jpg')"></div>
+        <div class="hero-image w-full h-full absolute left-0 top-0 z-10 bg-no-repeat bg-cover" style="background-image: url('./assets/img/home/slider-bg-new.jpg')"></div>
+        <img src="assets/img/home/logo-white.png" alt="" class="max-w-16 z-20 absolute right-5 top-5" />
       </section>
       <!--      service category -->
       <section class="service-section py-[60px]">
