@@ -28,7 +28,7 @@ html {
   padding: 0 20px;
 }
 .hero-area {
-  height: calc(80vh - 140px);
+  height: calc(100vh - 140px);
 }
 .hero-image {
   background-position: 100% center;

@@ -25,9 +25,18 @@ function linePopup() {
   }
 }
 
+//彈窗確認
+function confirmPopup() {
+  const content = tinymce.get("content").getContent();
+  const output = $("#dialog output");
+  output.html(`${content}`);
+  dialog.showModal();
+}
+
 // 送出文章表單
-function sendPost(element) {
-  const form = element.closest("form");
+function sendPost() {
+  const form = document.getElementById("post-form");
+  console.log("🚀 ~ form:", form);
   const formData = new FormData(form);
   const dataObj = {};
 
@@ -37,7 +46,7 @@ function sendPost(element) {
       value = tinymce.get("content").getContent();
     }
     dataObj[key] = value;
-    console.log(`${key}: ${value}`);
   }
   console.log("🚀 ~ dataObj:", dataObj);
+  dialog.close();
 }

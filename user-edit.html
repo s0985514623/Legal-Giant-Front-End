@@ -148,12 +148,22 @@
             <input type="email" id="email" name="email" value="" />
           </div>
           <div class="flex flex-col gap-2">
-            <label for="about" class="font-semibold">關於我：</label>
-            <textarea id="about" name="about">沒錯我是律師</textarea>
+            <label for="content" class="font-semibold">關於我：</label>
+            <textarea id="content" name="content">沒錯我是律師</textarea>
           </div>
-          <button onclick="sendPost(this)" type="button" class="bg-primary-100 p-2.5 text-white font-semibold">送出</button>
+          <button onclick="confirmPopup()" type="button" class="bg-primary-100 p-2.5 text-white font-semibold">送出</button>
         </form>
       </section>
+      <dialog id="dialog">
+        <div class="dialog-wrap flex flex-col gap-4 items-center justify-center p-5 min-w-[540px]">
+          <output class="content"></output>
+          <p class="font-semibold text-2xl">確定要送出嗎？</p>
+          <div class="flex gap-4">
+            <button onclick="this.closest('dialog').close()" class="bg-primary-100 p-2.5 text-white font-semibold">取消</button>
+            <button onclick="sendPost()" class="bg-primary-100 p-2.5 text-white font-semibold">確定</button>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer></footer>
     <!-- script -->
@@ -165,6 +175,40 @@
     <script>
       tinymce.init({
         selector: "#content",
+        plugins: "image code",
+        toolbar: "undo redo | link image | styles | bold italic | alignleft aligncenter alignright |outdent indent | code",
+        image_title: true,
+        automatic_uploads: true,
+        file_picker_types: "image",
+        file_picker_callback: (cb, value, meta) => {
+          const input = document.createElement("input");
+          input.setAttribute("type", "file");
+          input.setAttribute("accept", "image/*");
+
+          input.addEventListener("change", (e) => {
+            const file = e.target.files[0];
+
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+              /*
+            Note: Now we need to register the blob in TinyMCEs image blob
+            registry. In the next release this part hopefully won't be
+            necessary, as we are looking to handle it internally.
+          */
+              const id = "blobid" + new Date().getTime();
+              const blobCache = tinymce.activeEditor.editorUpload.blobCache;
+              const base64 = reader.result.split(",")[1];
+              const blobInfo = blobCache.create(id, file, base64);
+              blobCache.add(blobInfo);
+
+              /* call the callback and populate the Title field with the file name */
+              cb(blobInfo.blobUri(), { title: file.name });
+            });
+            reader.readAsDataURL(file);
+          });
+
+          input.click();
+        },
         license_key: "gpl",
       });
       $.fileup({
