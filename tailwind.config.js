@@ -6,7 +6,7 @@ module.exports = {
         primary: {
           50: "#9497f4",
           100: "#6164c1",
-          500: "#2e318e",
+          500: "#1D4077",
           900: "#00005b",
         },
         secondary: "#FBF7ED",
