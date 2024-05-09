@@ -108,7 +108,7 @@ html {
   background-repeat: no-repeat;
 }
 .mini-contact {
-  background-color: #2e318e;
+  background-color: #1d4077;
   /* background-image: url(./../img/min-contact-bg.png); */
   background-size: cover;
   background-repeat: no-repeat;
@@ -370,12 +370,12 @@ button::-moz-focus-inner {
 
 @media (max-width: 768px) {
   .hero-image {
-    background-position: 70% center;
+    background-position: 43% center;
   }
 }
 @media (max-width: 640px) {
   .hero-image {
-    background-position: 50% center;
+    background-position: 43% center;
   }
 }
 @media (max-width: 320px) {
